@@ -1,0 +1,23 @@
+nav{
+    background-color: lightblue;
+    /* position: absolute;
+    top: 0;
+    left: 0; */
+    width: 25%;
+    height: 100%;
+}
+main{
+    background-color: lightgreen;
+    /* position: absolute;
+    top: 0;
+    left: 25%; */
+    height: 100%;
+    width: 75%;
+}
+body{
+    display: flex;
+    margin: 0;
+}
+/* main, nav{
+
+} */
