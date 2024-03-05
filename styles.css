@@ -1,31 +1,60 @@
-nav{
-    background-color: lightblue;
-    width: 25%;
-    text-align: center;
+* {
+    font-family: sans-serif;
 }
-main{
-    background-color: lightgreen;
-    width: 75%;
-}
-body{
-    display: flex;
+
+body {
     margin: 0;
-    flex-direction: row-reverse;
 }
-html, body{
-    height: 100%;
+
+.navbar {
+    line-height: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: red;
+    padding: 15px;
 }
-#seznam-knih{
-    margin-top: 20px;
+
+.navbar-heading {
+    font-size: xx-large;
 }
-.kniha{
-    margin: 10px;
-    padding: 10px;
-    width: -webkit-fill-available;
-    background-color: inherit;
-    border: none;
-    font-size: large;
+
+.link {
+    text-decoration: none;
 }
-.kniha:hover{
-    background-color: lightgrey;
+
+.navbar-section-two {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.navbar-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar-item {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.navbar-input {
+    height: 25px;
+}
+.button-img {
+    height: 25px;
+}
+
+.navbar-search-button {
+    padding: 0;
+}
+
+.navbar-search-bar {
+    display: flex;
+    align-items: center;
 }

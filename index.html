@@ -7,21 +7,37 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <main>obsah</main>
-    <nav>
-        <h1>Knihy</h1>
-        <input type="text"> <button>Hledat</button>
-        <div id="seznam-knih">
-            <button class="kniha">Jáma a kyvadlo</button>
-            <button class="kniha">Jáma a kyvadlo</button>
-            <button class="kniha">Jáma a kyvadlo</button>
-            <button class="kniha">Jáma a kyvadlo</button>
-            <button class="kniha">Jáma a kyvadlo</button>
-            <button class="kniha">Jáma a kyvadlo</button>
-            <button class="kniha">Jáma a kyvadlo</button>
-            <button class="kniha">Jáma a kyvadlo</button>
-        </div>
-    </nav>
+    <header>
+        <nav class="navbar">
+
+            <div class="navbar-section navbar-section-one">
+                <p class="navbar-heading">Maturitní Rozbory</p>
+            </div>
+
+
+            <div class="navbar-section navbar-section-two">
+
+
+                <div class="navbar-item">
+                    <img src="home-icon.svg" alt="" class="navbar-image" width="30px">
+                    <a href="#" class="navbar-link link">Domů</a>
+                </div>
+                <div class="navbar-item">
+                    <img src="book-icon.svg" alt="" class="navbar-image" width="30px">
+                    <a href="#" class="navbar-link link">Rozbory</a>
+                </div>
+
+
+                <div class="navbar-search-bar">
+                    <input type="text" class="navbar-input">
+                    <button class="navbar-search-button"><img src="search-icon.svg" alt="" class="button-img"></button>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+
     <script src="script.js"></script>
 </body>
 </html>
