@@ -160,3 +160,12 @@ li{
 .navbar-search-bar:hover {
     box-shadow: 4px 4px 10px #252636;
 }
+
+.big {
+    width: fit-content;
+    width: -moz-fit-content;
+    padding: 5px;
+    padding-left: 13px;
+    border-radius: 10rem;
+}
+
