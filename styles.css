@@ -12,6 +12,7 @@
 :root {
     --input-background: ivory;
     --navbar-background: #cfd6dc;
+    --light-shadow: #6c767e;
 }
 
 body {
@@ -26,6 +27,7 @@ body {
     align-items: center;
     background-color: var(--navbar-background);
     padding: 5px 25px 5px 25px;
+    box-shadow: 0px 3px 10px var(--light-shadow);
 }
 
 .navbar-heading {
@@ -82,29 +84,61 @@ body {
 .navbar-search-button:active{
     background-color: var(--input-background);
 }
-/*  */
+
 
 
 /* main sections*/
-section {
-    text-align: center;
-    width: 50vw;
+
+.home-main {
+    display: grid;
+    grid-auto-columns: 1fr;
+    gap: 1rem;
+    grid-template-areas:
+        'one one'
+        'two three';
+    margin: 2rem;
+    padding: 1rem;
 }
-.home-main{
-    display: flex;
-    justify-content: space-around;
+.uvod {
+    grid-area: one;
 }
-ul{
+.kriteria {
+    grid-area: two;
+}
+.struktura {
+    grid-area: three;
+}
+
+.uvod, .kriteria, .struktura {
+    background: #eff4f8;
+    padding: 1rem;
+    box-shadow: 3px 3px 10px var(--light-shadow);
+    transition: 500ms;
+}
+
+.uvod:hover, .kriteria:hover, .struktura:hover {
+    box-shadow: 4px 4px 10px #252636;
+}
+
+
+ul {
     text-align: left;
 }
-li{
+li {
     padding: 5px;
 }
-#uvod{
-    width: calc(100% - 2*20px);
+.uvod{
+
     margin: 0 auto;
     text-align: center;
+    font-size: larger;
 }
+
+
+
+
+
+
 .navbar-search-bar {
     display: flex;
     align-items: center;
@@ -112,8 +146,8 @@ li{
     padding: 5px;
     padding-left: 13px;
     border-radius: 10rem;
-    box-shadow: 3px 3px 10px #6c767e;
-    transition: 500ms;
+    box-shadow: 3px 3px 10px var(--light-shadow);
+    transition: 500ms;;
 }
 
 .navbar-link {
@@ -126,11 +160,11 @@ li{
 
 .link-text {
     font-size: large;
-    color: #6c767e;
+    color: var(--light-shadow);
 }
 
 .navbar-svg {
-    fill: #6c767e;
+    fill: var(--light-shadow);
 }
 
 #navbar-active-text {
@@ -146,7 +180,7 @@ li{
     padding: 4px;
     padding-right: 8px;
     background-color: var(--input-background);
-    box-shadow: 3px 3px 10px #6c767e;
+    box-shadow: 3px 3px 10px var(--light-shadow);
 }
 #navbar-active:hover {
     border-radius: 1rem;
