@@ -12,7 +12,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: red;
+    background-color: rgb(190, 179, 179);
     padding: 15px;
 }
 
@@ -91,7 +91,7 @@ li{
     padding: 5px;
 }
 #uvod{
-    width: calc(100% - 2*20px); /* Adjust the 20px value to increase or decrease the space */
+    width: calc(100% - 2*20px);
     margin: 0 auto;
     text-align: center;
 }
