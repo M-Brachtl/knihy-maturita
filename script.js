@@ -1,7 +1,23 @@
-document.querySelector('.navbar-search-button').addEventListener('click',()=>{
-    const search = document.querySelector('.navbar-input');
-    window.location.href = 'rozbory.html#'+search.value;
-    location.reload();
+document.querySelectorAll('.navbar-search-button').forEach((element)=>{
+    element.addEventListener('click',()=>{
+        let search = document.querySelector('.navbar-input');
+        if (search.value === "") {
+            search = document.querySelector('.big input');
+        };
+        window.location.href = 'rozbory.html#'+search.value;
+        try {
+            
+            const searchText = decodeURIComponent(window.location.hash.substring(1));
+            console.log("Vyhledávaný text: " + searchText);
+            document.querySelector('.big input').value = searchText;
+            location.reload();
+        } catch (error) {};
+    });
+    try {
+        const searchText = decodeURIComponent(window.location.hash.substring(1));
+        console.log("Vyhledávaný text: " + searchText);
+        document.querySelector('.big input').value = searchText;
+        
+    } catch (error) {};
+    
 });
-const searchText = decodeURIComponent(window.location.hash.substring(1));
-console.log("Vyhledávaný text: " + searchText);
