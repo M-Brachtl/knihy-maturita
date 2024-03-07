@@ -97,7 +97,9 @@ body {
         'one one'
         'two three';
     margin: 2rem;
+
     padding: 1rem;
+    /* grid-template-rows: auto 1fr auto; */
 }
 .uvod {
     grid-area: one;
@@ -114,6 +116,7 @@ body {
     padding: 1rem;
     box-shadow: 3px 3px 10px var(--light-shadow);
     transition: 500ms;
+    /* height: 100%; */
 }
 
 .uvod:hover, .kriteria:hover, .struktura:hover {
@@ -220,4 +223,50 @@ li {
 .rozbory-main{
     text-align: -webkit-center;
     margin-top: 10px;
+}
+
+
+
+
+/* ROZBORY */
+
+.rozbory-main {
+    /* display: flex;
+    gap: 5rem; */
+    display: grid;
+    grid-template-areas:
+        'one two two two';
+    grid-auto-columns: 1fr;
+    gap: 1rem;
+    margin: 2rem;
+    padding: 1rem;
+}
+
+.rozbory-section-1 {
+    display: flex;
+    flex-direction: column;
+    grid-area: one;
+}
+
+.rozbory-section-2 {
+    grid-area: two;
+}
+
+.rozbory-section-1, .rozbory-section-2 {
+    background: #eff4f8;
+    padding: 1rem;
+    box-shadow: 3px 3px 10px var(--light-shadow);
+    transition: 500ms;
+}
+.rozbory-section-1:hover, .rozbory-section-2:hover {
+    box-shadow: 4px 4px 10px #252636;
+}
+
+.center-align {
+    align-items: center;
+}
+
+.seznam-knih {
+    padding-left: 65px;
+    padding-top: 20px;
 }
