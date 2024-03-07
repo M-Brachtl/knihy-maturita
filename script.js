@@ -16,14 +16,18 @@ document.querySelectorAll('.navbar-search-button').forEach((element) => {
 });
 let toSearch = "";
 document.addEventListener('keydown', (e) => {
+    console.log(e.key)
+    if(document.activeElement === document.querySelector('.big input')){
+        console.log("Input is focused and key is pressed.");
     try {
         if ("abcdefghijklmnopqrstuvwxyzěščřžýáíéďťňóúů ".includes(e.key) || "ABCDEFGHIJKLMNOPQRSTUVWXYZĚŠČŘŽÝÁÍÉĎŤŇÓÚŮ ".includes(e.key)) {
-            toSearch += e.key;
+            toSearch =document.querySelector('.big input').value + e.key;
         } else if (e.key === "Backspace") {
             toSearch = toSearch.substring(0, toSearch.length - 1);
         };
         searchBooks(toSearch);
     } catch (e) { };
+    }
     if (e.key === 'Enter') {
         let search = document.querySelector('.navbar-input');
         if (search.value === "") {
@@ -40,7 +44,14 @@ document.addEventListener('keydown', (e) => {
 });
 
 function searchBooks(searchText) {
-    document.getElementById('test-search').innerHTML = searchText;
+    const books = document.querySelectorAll('.seznam-knih li');
+    books.forEach((book)=>{
+        if(book.textContent.toLowerCase().includes(searchText.toLowerCase())){
+            book.style.display = "list-item";
+        } else {
+            book.style.display = "none";
+        };
+    });
 };
 
 
