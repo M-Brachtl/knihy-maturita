@@ -23,7 +23,6 @@ document.addEventListener('keydown', (e) => {
             toSearch = toSearch.substring(0, toSearch.length - 1);
         };
         searchBooks(toSearch);
-        
     } catch (e) { };
     if (e.key === 'Enter') {
         let search = document.querySelector('.navbar-input');
