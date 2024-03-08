@@ -16,18 +16,21 @@ document.querySelectorAll('.navbar-search-button').forEach((element) => {
 });
 let toSearch = "";
 document.addEventListener('keydown', (e) => {
-    console.log(e.key)
+    setTimeout(() => {
     if(document.activeElement === document.querySelector('.big input')){
-        console.log("Input is focused and key is pressed.");
     try {
-        if ("abcdefghijklmnopqrstuvwxyzěščřžýáíéďťňóúů ".includes(e.key) || "ABCDEFGHIJKLMNOPQRSTUVWXYZĚŠČŘŽÝÁÍÉĎŤŇÓÚŮ ".includes(e.key)) {
-            toSearch =document.querySelector('.big input').value + e.key;
-        } else if (e.key === "Backspace") {
-            toSearch = toSearch.substring(0, toSearch.length - 1);
-        };
+        // if (("abcdefghijklmnopqrstuvwxyzěščřžýáíéďťňóúů ".includes(e.key) || "ABCDEFGHIJKLMNOPQRSTUVWXYZĚŠČŘŽÝÁÍÉĎŤŇÓÚŮ ".includes(e.key)) && e.ctrlKey === false) {
+        //     toSearch =document.querySelector('.big input').value;
+        // } else if (e.key === "Backspace") {
+        //     toSearch = document.querySelector('.big input').value//toSearch.substring(0, toSearch.length - 1);
+        // } else {
+        //     toSearch = document.querySelector('.big input').value;
+        // }
+        toSearch =document.querySelector('.big input').value;
         searchBooks(toSearch);
     } catch (e) { };
-    }
+    console.log(toSearch);
+    }},1);
     if (e.key === 'Enter') {
         let search = document.querySelector('.navbar-input');
         if (search.value === "") {
