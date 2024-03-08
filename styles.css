@@ -284,3 +284,16 @@ li {
     background-color: var(--input-background);
     box-shadow: 3px 3px 10px var(--light-shadow);
 }
+
+/* Fixed navbar */
+.navbar{
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    width: -webkit-fill-available;
+}
+
+main{
+    top: 106px;
+    position: relative;
+}
