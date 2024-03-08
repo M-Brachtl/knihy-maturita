@@ -2,12 +2,9 @@
     font-family: arial;
 } */
 
-@font-face {
-    font-family: 'montserrat';
-    src: url("");
+a {
+    text-decoration: none;
 }
-
-
 
 :root {
     --input-background: ivory;
@@ -129,6 +126,7 @@ ul {
 }
 li {
     padding: 5px;
+    padding-top: 10px;
 }
 .uvod{
 
@@ -268,5 +266,21 @@ li {
 
 .seznam-knih {
     padding-left: 65px;
-    padding-top: 20px;
+    padding-top: 10px;
+    font-size: larger;
+}
+
+.seznam-button {
+    border: 2px solid transparent;
+    border-radius: 0.5rem;
+    padding: 4px;
+    cursor: pointer;
+    font-size: large;
+    color: black;
+    transition: 500ms;
+}
+
+.seznam-button:hover {
+    background-color: var(--input-background);
+    box-shadow: 3px 3px 10px var(--light-shadow);
 }
