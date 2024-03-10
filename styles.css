@@ -275,6 +275,7 @@ li {
     border: 2px solid transparent;
     border-radius: 0.5rem;
     padding: 4px;
+    padding-bottom: 20px;
     cursor: pointer;
     font-size: large;
     color: black;
@@ -302,4 +303,12 @@ object{
 main{
     top: 106px;
     position: relative;
+}
+
+/* autor spany */
+span{
+    display: block;
+    font-size: small;
+    margin: 0 11px;
+    width: fit-content;
 }

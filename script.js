@@ -68,7 +68,12 @@ async function getBooks() {
     const response = await fetch('knihy.json');
     const data = await response.json();
     data.forEach((book) => {
-        document.querySelector('.seznam-knih').innerHTML += `<li><a class="seznam-button" onclick="document.querySelector('object').data='${book.path}'">${book.name}</a></li>`;
+        document.querySelector('.seznam-knih').innerHTML += `<li><a class="seznam-button" onclick="document.querySelector('object').data='${book.path}'">${book.name}</a><span>- ${book.author}</span></li>`;
+    });
+    document.querySelectorAll('li').forEach((button) => {
+        if(button.childNodes[0].getBoundingClientRect().width < button.childNodes[1].clientWidth){
+            button.childNodes[0].style.paddingRight =  button.childNodes[1].clientWidth - button.childNodes[0].getBoundingClientRect().width + 16 + 4 + "px";
+        }
     });
 };
 try {
