@@ -1,0 +1,27 @@
+[
+    {
+        "name": "Výlet pana Broučka",
+        "author": "Svatopluk Čech",
+        "path": "knihy/Pan_Broucek.pdf"
+    },
+    {
+        "name": "Kytice",
+        "author": "Karel Jaromír Erben",
+        "path": "knihy/KYTICE.pdf"
+    },
+    {
+        "name": "Noc na Karlštejně",
+        "author": "Jaroslav Vrchlický",
+        "path": "knihy/Noc_na_Karlstejne.pdf"
+    },
+    {
+        "name": "Chrám Matky Boží v Paříži",
+        "author": "Victor Hugo",
+        "path": "knihy/notre_dame.pdf"
+    },
+    {
+        "name": "Strakonický dudák",
+        "author": "Josef Kajetán Tyl",
+        "path": "knihy/STAKONICKY__DUDAK.pdf"
+    }
+]

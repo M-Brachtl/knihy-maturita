@@ -255,6 +255,7 @@ li {
     padding: 1rem;
     box-shadow: 3px 3px 10px var(--light-shadow);
     transition: 500ms;
+    min-height: 73vh;
 }
 .rozbory-section-1:hover, .rozbory-section-2:hover {
     box-shadow: 4px 4px 10px #252636;
@@ -283,6 +284,11 @@ li {
 .seznam-button:hover {
     background-color: var(--input-background);
     box-shadow: 3px 3px 10px var(--light-shadow);
+}
+object{
+    height: 72vh;
+    position: sticky;
+    top: 124px;
 }
 
 /* Fixed navbar */

@@ -58,10 +58,24 @@ function searchBooks(searchText) {
 };
 
 
-try {
-    const searchText = decodeURIComponent(window.location.hash.substring(1));
-    console.log("Vyhledávaný text: " + searchText);
-    document.querySelector('.big input').value = searchText;
-    searchBooks(searchText);
-} catch (error) { };
+// try {
+//     const searchText = decodeURIComponent(window.location.hash.substring(1));
+//     console.log("Vyhledávaný text: " + searchText);
+//     document.querySelector('.big input').value = searchText;
+// } catch (error) { };
 
+async function getBooks() {
+    const response = await fetch('knihy.json');
+    const data = await response.json();
+    data.forEach((book) => {
+        document.querySelector('.seznam-knih').innerHTML += `<li><a class="seznam-button" onclick="document.querySelector('object').data='${book.path}'">${book.name}</a></li>`;
+    });
+};
+try {
+    getBooks().then(() => {
+        const searchText = decodeURIComponent(window.location.hash.substring(1));
+        console.log("Vyhledávaný text: " + searchText);
+        document.querySelector('.big input').value = searchText;
+        searchBooks(searchText);
+    });
+} catch (error) {};
