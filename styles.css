@@ -223,6 +223,12 @@ li {
     margin-top: 10px;
 }
 
+.content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: calc(100vh - 106px);
+}
 
 
 
@@ -248,6 +254,8 @@ li {
 
 .rozbory-section-2 {
     grid-area: two;
+    display: flex;
+    align-items: center;
 }
 
 .rozbory-section-1, .rozbory-section-2 {
