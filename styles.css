@@ -10,6 +10,7 @@ a {
     --input-background: ivory;
     --navbar-background: #cfd6dc;
     --light-shadow: #6c767e;
+    --navbar-height: 106px;
 }
 
 body {
@@ -227,9 +228,12 @@ li {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: calc(100vh - 106px);
+    height: calc(100vh - var(--navbar-height));
 }
 
+.grid-section {
+    border-radius: 5px;
+}
 
 
 /* ROZBORY */
@@ -319,4 +323,37 @@ span{
     font-size: small;
     margin: 0 11px;
     width: fit-content;
+}
+
+
+
+
+.menu-button {
+    visibility: hidden;
+    width: 0;
+}
+
+@media screen and (width < 1110px) {
+    .navbar-heading {
+        visibility: hidden;
+        width: 0;
+    }
+    .navbar {
+        justify-content: center;
+    }
+}
+
+@media screen and (width < 650px) {
+    .navbar-item {
+        visibility: hidden;
+        width: 0;
+    }
+    .menu-button {
+        visibility: visible;
+        width: auto;
+    }
+}
+
+.drop-link {
+    display: none;
 }

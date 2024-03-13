@@ -84,3 +84,19 @@ try {
         searchBooks(searchText);
     });
 } catch (error) {};
+
+
+const navButtonMenu = document.querySelector(".menu-button");
+const dropLink = document.querySelectorAll(".drop-link");
+
+navButtonMenu.addEventListener("click", () => {openMenu()});
+
+// function openMenu() {
+//     dropLink.forEach((link) => {
+//         if (link.style.display === "none") {
+//             link.style.display = "block";
+//         } else {
+//             link.style.display = "none";
+//         }
+//     });
+// }
