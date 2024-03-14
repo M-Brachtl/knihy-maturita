@@ -95,16 +95,12 @@ try {
 // Adamův prostor //
 
 const navButtonMenu = document.querySelector(".menu-button");
-const dropLink = document.querySelectorAll(".drop-link");
+const dropMenu = document.querySelector(".dropdown");
 
-navButtonMenu.addEventListener("click", () => {openMenu()});
-
-// function openMenu() {
-//     dropLink.forEach((link) => {
-//         if (link.style.display === "none") {
-//             link.style.display = "block";
-//         } else {
-//             link.style.display = "none";
-//         }
-//     });
-// }
+navButtonMenu.addEventListener("click", () => {
+    if (dropMenu.style.display === "none") {
+        dropMenu.style.display = "block";
+    } else {
+        dropMenu.style.display = "none";
+    }
+});
