@@ -82,9 +82,17 @@ try {
         console.log("Vyhledávaný text: " + searchText);
         document.querySelector('.big input').value = searchText;
         searchBooks(searchText);
+        // if(document.querySelector('.navbar-heading').style.visibility === "hidden"){
+        //     document.querySelector('object').hidden = true;
+        //     document.querySelector('.mobile-pdf').hidden = false;
+        // }
+        // document.querySelector('.navbar-heading').visi
     });
 } catch (error) {};
 
+
+
+// Adamův prostor //
 
 const navButtonMenu = document.querySelector(".menu-button");
 const dropLink = document.querySelectorAll(".drop-link");
