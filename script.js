@@ -94,7 +94,7 @@ async function getBooks() {
     };
     document.querySelectorAll('li').forEach((button) => {
         if (button.childNodes[0].getBoundingClientRect().width < button.childNodes[1].clientWidth) {
-            button.childNodes[0].style.paddingRight = button.childNodes[1].clientWidth - button.childNodes[0].getBoundingClientRect().width + 16 + 4 + "px";
+            button.childNodes[0].style.paddingRight = button.childNodes[1].clientWidth - button.childNodes[0].getBoundingClientRect().width + 16 + 6 + "px";
         }
     });
 };
@@ -117,11 +117,13 @@ try {
 
 const navButtonMenu = document.querySelector(".menu-button");
 const dropMenu = document.querySelector(".dropdown");
-dropMenu.style.display = "none";
+dropMenu.style.opacity = "0";
 navButtonMenu.addEventListener("click", () => {
-    if (dropMenu.style.display === "none") {
-        dropMenu.style.display = "block";
+    if (dropMenu.style.opacity === "0") {
+        dropMenu.style.opacity = "1";
+        dropMenu.style.visibility = "visible";
     } else {
-        dropMenu.style.display = "none";
+        dropMenu.style.opacity = "0";
+        dropMenu.style.visibility = "hidden";
     }
 });

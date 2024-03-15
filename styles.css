@@ -73,7 +73,7 @@ body {
     border-radius: 10rem;
     padding: 2px 3px 2px 3px;
     cursor: pointer;
-    transition: background-color 225ms;
+    transition: background-color 150ms;
 }
 .navbar-search-button:active{
     background-color: var(--input-background);
@@ -109,7 +109,8 @@ body {
     background: #eff4f8;
     padding: 1rem;
     box-shadow: 3px 3px 10px var(--light-shadow);
-    transition: 500ms;
+    transition: box-shadow 500ms;
+    will-change: box-shadow;
     /* height: 100%; */
 }
 
@@ -400,7 +401,20 @@ body {
     body {
         margin-bottom: 6.5rem;
     }
+    .navbar-input {
+        width: 175px;
+    }
+    .navbar-section-two {
+        gap: 10px;
+    }
 
+    /* ROZBORY */
+    .rozbory-main {
+        grid-template-areas:
+            'one'
+            'one'
+            'two'; 
+    }
 }
 
 
@@ -417,22 +431,26 @@ body {
 
 .dropdown {
     position: relative;
-    display: none;
+    z-index: 2;
+    visibility: hidden;
+    opacity: 0;
+    transition: 350ms ease;
 }
 
 .droplink-container {
     position: absolute;
     top: calc(var(--navbar-height) + 50px);
     position: absolute;
-    left: 20%;
+    left: 25%;
     transform: translate(-50%, -50%);
-    z-index: 1;
+    z-index: 2;
 }
 .droplink-container:nth-child(2) {
     top: calc(var(--navbar-height) + 115px);
 }
 
 .dropdown::before {
+    z-index: 1;
     content: "";
     position: absolute;
     top: calc(var(--navbar-height) + 60px);
@@ -440,7 +458,7 @@ body {
     height: 190px;
     background-color: var(--navbar-background);
     border-radius: 5px;
-    left: 20%;
+    left: 25%;
     transform: translate(-50%, -50%);
     box-shadow: 0px 1px 10px var(--light-shadow);
 }
@@ -459,7 +477,7 @@ body {
     background-color: var(--input-background);
     border-radius: 10px;
     box-shadow: 3px 3px 10px var(--light-shadow);
-    transition: fill 225ms, box-shadow 500ms;
+    transition: fill 150ms, box-shadow 500ms;
 }
 .menu-button:hover {
     box-shadow: 4px 4px 10px #252636;
