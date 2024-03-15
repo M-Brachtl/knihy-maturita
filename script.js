@@ -78,11 +78,11 @@ async function getBooks() {
     const response = await fetch('knihy.json');
     const data = await response.json();
     data.forEach((book) => {
-        document.querySelector('.seznam-knih').innerHTML += `<li><a class="seznam-button">${book.name}</a><span>- ${book.author}</span></li>`;
+        document.querySelector('.seznam-knih').innerHTML += `<li class="seznam-button"><a class="seznam-button-text">${book.name}<span>- ${book.author}</span></a></li>`;
     });
     for (let i = 0; i < data.length; i++) {
         let book = data[i];
-        document.querySelector('.seznam-knih').childNodes[i+1].childNodes[0].addEventListener('click',() => {
+        document.querySelector('.seznam-knih').childNodes[i+1].addEventListener('click',() => {
             console.log("AAAAAAAAAAAAAAAAAAAAAAAAa");
             document.querySelector('object').data = book.path;
             // mobile view
@@ -92,11 +92,11 @@ async function getBooks() {
             mobileView.childNodes[5].href = book.path;
         });
     };
-    document.querySelectorAll('li').forEach((button) => {
-        if (button.childNodes[0].getBoundingClientRect().width < button.childNodes[1].clientWidth) {
-            button.childNodes[0].style.paddingRight = button.childNodes[1].clientWidth - button.childNodes[0].getBoundingClientRect().width + 16 + 6 + "px";
-        }
-    });
+    // document.querySelectorAll('li').forEach((button) => {
+    //     if (button.childNodes[0].getBoundingClientRect().width < button.childNodes[1].clientWidth) {
+    //         button.childNodes[0].style.paddingRight = button.childNodes[1].clientWidth - button.childNodes[0].getBoundingClientRect().width + 16 + 6 + "px";
+    //     }
+    // });
 };
 try {
     getBooks().then(() => {
