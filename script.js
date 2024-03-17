@@ -8,7 +8,7 @@ document.querySelectorAll('.navbar-search-button').forEach((element) => {
         try {
 
             const searchText = decodeURIComponent(window.location.hash.substring(1));
-            console.log("Vyhledávaný text: " + searchText);
+            //console.log("Vyhledávaný text: " + searchText);
             document.querySelector('.big input').value = searchText;
             location.reload();
         } catch (error) { };
@@ -78,7 +78,7 @@ async function getBooks() {
     const response = await fetch('knihy.json');
     const data = await response.json();
     data.forEach((book) => {
-        document.querySelector('.seznam-knih').innerHTML += `<li class="seznam-button"><a>${book.name}<span>- ${book.author}</span></a></li>`;
+        document.querySelector('.seznam-knih').innerHTML += `<li class="seznam-button"><a class="seznam-button-text">${book.name}<span>- ${book.author}</span></a></li>`;
     });
     for (let i = 0; i < data.length; i++) {
         let book = data[i];
@@ -92,11 +92,11 @@ async function getBooks() {
             mobileView.childNodes[5].href = book.path;
         });
     };
-    document.querySelectorAll('li').forEach((button) => {
-        if (button.childNodes[0].getBoundingClientRect().width < button.childNodes[1].clientWidth) {
-            button.childNodes[0].style.paddingRight = button.childNodes[1].clientWidth - button.childNodes[0].getBoundingClientRect().width + 16 + 6 + "px";
-        }
-    });
+    // document.querySelectorAll('li').forEach((button) => {
+    //     if (button.childNodes[0].getBoundingClientRect().width < button.childNodes[1].clientWidth) {
+    //         button.childNodes[0].style.paddingRight = button.childNodes[1].clientWidth - button.childNodes[0].getBoundingClientRect().width + 16 + 6 + "px";
+    //     }
+    // });
 };
 try {
     getBooks().then(() => {
@@ -106,8 +106,9 @@ try {
         searchBooks(searchText);
         if (document.querySelector('.navbar-heading').clientWidth == 0) {
             console.log("Mobilní zařízení");
-            document.querySelector('object').hidden = true;
-            document.getElementById('mobile-pdf').hidden = false;
+            document.querySelector('object').style.display = "none";
+        } else {
+            document.getElementById('mobile-pdf').style.display = "none";
         }
     });
 } catch (error) { };
