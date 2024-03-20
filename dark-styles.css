@@ -1,0 +1,577 @@
+a {
+    text-decoration: none;
+}
+
+:root {
+    --input-background: #4c4c50;
+    --navbar-background: #17171f;
+    --light-shadow: #454141;
+    --navbar-height: 102px;
+    --text-color: #e6e6e6;
+}
+
+body {
+    margin: 0;
+    background-color: #1c1c1e;
+    color: var(--text-color);
+}
+
+.navbar {
+    line-height: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--navbar-background);
+    padding: 5px 25px 5px 25px;
+    box-shadow: 0px 3px 10px var(--light-shadow);
+}
+
+.navbar-heading {
+    font-size: xxx-large;
+    font-weight: bold;
+    color: lightgrey;
+}
+
+.link {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.navbar-section-two {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.navbar-item {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    /* transition: 500ms;
+    border: transparent 3px solid;
+    border-radius: 1rem; */
+}
+
+/*  */
+
+.navbar-input {
+    height: 26px;
+    border: transparent;
+    background-color: black;
+    font-size: larger;
+    color: lightgrey;
+    transition: 500ms;
+}
+
+.navbar-input:focus {
+    outline: none;
+}
+
+
+.button-img {
+    height: 25px;
+}
+
+.navbar-search-button {
+    border: transparent;
+    background-color: #969ba4;
+    border-radius: 10rem;
+    padding: 2px 3px 2px 3px;
+    cursor: pointer;
+    transition: background-color 150ms;
+}
+.navbar-search-button:active{
+    background-color: var(--input-background);
+}
+
+
+
+/* main sections*/
+
+.home-main {
+    display: grid;
+    grid-auto-columns: 1fr;
+    gap: 1rem;
+    grid-template-areas:
+        'one one'
+        'two three';
+    margin: 2rem;
+
+    padding: 1rem;
+    /* grid-template-rows: auto 1fr auto; */
+}
+.uvod {
+    grid-area: one;
+}
+.kriteria {
+    grid-area: two;
+}
+.struktura {
+    grid-area: three;
+}
+
+.uvod, .kriteria, .struktura {
+    background: #565656;
+    padding: 1rem;
+    box-shadow: 3px 3px 10px var(--light-shadow);
+    transition: box-shadow 500ms;
+    will-change: box-shadow;
+    /* height: 100%; */
+}
+
+.uvod:hover, .kriteria:hover, .struktura:hover {
+    box-shadow: 4px 4px 10px #252636;
+}
+
+
+ul {
+    text-align: left;
+}
+li {
+    padding: 5px;
+    padding-top: 10px;
+}
+.uvod{
+
+    margin: 0 auto;
+    text-align: center;
+    font-size: larger;
+}
+
+
+
+
+
+.navbar-search-bar {
+    display: flex;
+    align-items: center;
+    background-color: black;
+    padding: 5px;
+    padding-left: 13px;
+    border-radius: 10rem;
+    box-shadow: 3px 3px 10px var(--light-shadow);
+    transition: 500ms;
+}
+
+.navbar-link {
+    padding-top: 3px;
+    color: black;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.link-text {
+    font-size: large;
+    color: rgb(176, 176, 176);
+}
+
+.navbar-svg {
+    fill: rgb(176, 176, 176);
+}
+
+#navbar-active-text {
+    color: whitesmoke;
+}
+#navbar-active-svg {
+    fill: whitesmoke;
+}
+#navbar-active {
+    border: 2px transparent solid;
+    transition: 500ms;
+    border-radius: 1rem;
+    padding: 4px;
+    padding-right: 8px;
+    background-color: var(--input-background);
+    box-shadow: 3px 3px 10px var(--light-shadow);
+}
+#navbar-active:hover {
+    border-radius: 1rem;
+    box-shadow: 4px 4px 10px #252636;
+}
+
+#navbar-inactive {
+    border: 2px transparent solid;
+    border-radius: 1rem;
+    padding: 4px;
+    padding-right: 8px;
+    transition: 500ms;
+}
+#navbar-inactive:hover {
+    background-color: var(--input-background);
+    box-shadow: 3px 3px 10px #6c767e;
+}
+
+.navbar-search-bar:hover {
+    box-shadow: 4px 4px 10px #252636;
+}
+
+.big {
+    width: fit-content;
+    width: -moz-fit-content;
+}
+
+.big input {
+    font-size: x-large;
+}
+
+.big svg {
+    height: 36px;
+    width: 36px;
+}
+
+.rozbory-main{
+    text-align: -webkit-center;
+    margin-top: 10px;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    /* height: calc(100vh - var(--navbar-height)); */
+    /* height: calc(100vh - 106px); */
+}
+
+.grid-section {
+    border-radius: 5px;
+}
+
+
+/* ROZBORY */
+
+.rozbory-main {
+    /* display: flex;
+    gap: 5rem; */
+    display: grid;
+    grid-template-areas:
+        'one two two two';
+    grid-auto-columns: 1fr;
+    gap: 1rem;
+    margin: 2rem;
+    padding: 1rem;
+}
+
+.rozbory-section-1 {
+    display: flex;
+    flex-direction: column;
+    grid-area: one;
+}
+
+.rozbory-section-2 {
+    grid-area: two;
+    display: flex;
+    justify-content: center;
+}
+
+.rozbory-section-1, .rozbory-section-2 {
+    background: #4f4f4f;
+    padding: 1rem;
+    box-shadow: 3px 3px 10px var(--light-shadow);
+    transition: 500ms;
+    min-height: 73vh;
+}
+.rozbory-section-1:hover, .rozbory-section-2:hover {
+    box-shadow: 4px 4px 10px #5a5b60;
+}
+
+.center-align {
+    align-items: center;
+}
+
+.seznam-knih {
+    padding-left: 65px;
+    padding-top: 10px;
+    font-size: larger;
+}
+
+.seznam-button {
+    border: 2px solid transparent;
+    border-radius: 0.5rem;
+    padding: 5px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    font-size: large;
+    color: rgb(200, 200, 200);
+    transition: 500ms;
+    width: fit-content;
+}
+.seznam-button:hover {
+    background-color: #323232;
+    box-shadow: 3px 3px 10px var(--light-shadow);
+}
+.seznam-button:active {
+    box-shadow: 4px 4px 10px #252636;
+    transition: box-shadow 150ms;
+}
+
+object{
+    height: 72vh;
+    position: sticky;
+    top: 124px;
+}
+
+/* Fixed navbar */
+.navbar{
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    width: -webkit-fill-available;
+}
+
+main{
+    top: 106px;
+    position: relative;
+    /* z-index: -1; */
+}
+
+/* autor spany */
+span{
+    display: block;
+    font-size: small;
+    margin: 0 11px;
+    width: fit-content;
+}
+
+/* .content-container {
+    height: auto;
+}
+body {
+    margin-bottom: 7rem;
+} */
+
+
+.menu-button {
+    visibility: hidden;
+    width: 0;
+}
+
+@media screen and (width > 1385px) and (height > 950px) {
+    .content-container {
+        height: calc(100vh - var(--navbar-height));
+    }
+}
+@media screen and (height < 950px) {
+    body {
+        margin-bottom: 6.5rem;
+    }
+}
+
+@media screen and (1385px > width > 785px) {
+    body {
+        margin-bottom: 6.5rem;
+    }
+}
+
+@media screen and (width < 785px) {
+    .home-main {
+        grid-template-areas:
+            'one'
+            'two'
+            'three';
+    }
+    body {
+        margin-bottom: 6.5rem;
+    }
+}
+
+@media screen and (width < 1150px) {
+    .navbar-heading {
+        visibility: hidden;
+        width: 0;
+    }
+    .navbar {
+        justify-content: center;
+    }
+}
+
+@media screen and (width < 650px) {
+    /* * {
+        font-size: medium;
+    } */
+    .navbar-item {
+        visibility: hidden;
+        width: 0;
+    }
+    .menu-button {
+        visibility: visible;
+        width: auto;
+    }
+    .content-container {
+        height: auto;
+    }
+
+    .home-main {
+        grid-template-areas:
+            'one'
+            'two'
+            'three';
+    }
+    body {
+        margin-bottom: 6.5rem;
+    }
+    .navbar-input{
+        width: 175px;
+        
+    }
+    .navbar-section-two {
+        gap: 10px;
+    }
+
+    /* ROZBORY */
+    .rozbory-main {
+        grid-template-areas:
+            'one'
+            'one'
+            'two'; 
+    }
+    /* .seznam-knih {
+        padding-left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    } */
+    #secondary-input {
+        width: 220px;
+    }
+    .rozbory-section-1, .rozbory-section-2 {
+        min-height: auto;
+    }
+    /* .content-container-rozbory {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: calc(100vh - var(--navbar-height));
+    } */
+}
+
+
+/* .home-main {
+    display: none;
+} */
+/* .navbar {
+    visibility: hidden;
+} */
+
+.drop-link {
+    display: flex;
+}
+
+.dropdown {
+    position: relative;
+    z-index: 2;
+    visibility: hidden;
+    opacity: 0;
+    transition: 350ms ease;
+}
+
+.droplink-container {
+    position: absolute;
+    top: calc(var(--navbar-height) + 50px);
+    position: absolute;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    position: fixed;
+}
+.droplink-container:nth-child(2) {
+    top: calc(var(--navbar-height) + 115px);
+}
+
+.dropdown::before {
+    z-index: 1;
+    content: "";
+    position: absolute;
+    top: calc(var(--navbar-height) + 60px);
+    width: 160px;
+    height: 190px;
+    background-color: var(--navbar-background);
+    border-radius: 5px;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 1px 10px var(--light-shadow);
+    position: fixed;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+
+/* 15/03 */
+.menu-button {
+    width: auto;
+    display: flex;
+    cursor: pointer;
+    border: transparent;
+    background-color: var(--input-background);
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px var(--light-shadow);
+    transition: fill 150ms, box-shadow 500ms;
+}
+.menu-button:hover {
+    box-shadow: 4px 4px 10px #252636;
+}
+.menu-button:active {
+    fill: var(--input-background);
+}
+
+.pdf-heading {
+    margin: 0;
+}
+.pdf-autor {
+    margin: 16px 0 16px 0;
+}
+#mobile-pdf {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.download-button {
+    width: auto;
+    display: flex;
+    cursor: pointer;
+    border: transparent;
+    background-color: #969ba4;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px var(--light-shadow);
+    transition: fill 150ms, box-shadow 500ms;
+}
+.download-button:hover {
+    box-shadow: 4px 4px 10px #1c1d27;
+}
+.download-button:active {
+    fill: var(--input-background);
+}
+
+/* theme switch styles */
+
+.theme-mode-switch {
+    position: fixed;
+    top: 0.5vh;
+    right: 0.5vw;
+    z-index: 20;
+}
+
+.theme-mode-switch svg{
+    cursor: pointer;
+    transition: 500ms;
+    border-radius: 100%;
+    padding: 1px;
+    fill: lightgray;
+    width: 20px;
+    height: 20px;
+}
+
+.theme-mode-switch svg:hover {
+    background-color: var(--input-background);
+    box-shadow: 4px 4px 10px #252636;
+}
+
+.theme-mode-switch button{
+    display: contents;
+}
