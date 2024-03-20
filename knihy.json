@@ -23,5 +23,10 @@
         "name": "Strakonický dudák",
         "author": "Josef Kajetán Tyl",
         "path": "knihy/STAKONICKY__DUDAK.pdf"
+    },
+    {
+        "name": "Anna Karenina",
+        "author": "Lev Nikolajevič Tolstoj",
+        "path": "knihy/Anna_Karennina.pdf"
     }
 ]
