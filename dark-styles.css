@@ -13,6 +13,7 @@ a {
 body {
     margin: 0;
     background-color: #1c1c1e;
+    transition: background-color 500ms;
     color: var(--text-color);
 }
 
@@ -25,6 +26,7 @@ body {
     background-color: var(--navbar-background);
     padding: 5px 25px 5px 25px;
     box-shadow: 0px 3px 10px var(--light-shadow);
+    transition: 500ms;
 }
 
 .navbar-heading {
@@ -75,14 +77,15 @@ body {
 
 .navbar-search-button {
     border: transparent;
-    background-color: #969ba4;
+    background-color: #4f4f4f;
     border-radius: 10rem;
     padding: 2px 3px 2px 3px;
     cursor: pointer;
-    transition: background-color 150ms;
+    fill: var(--text-color);
+    transition: 500ms, background-color 150ms;
 }
 .navbar-search-button:active{
-    background-color: var(--input-background);
+    background-color: var(--navbar-background);
 }
 
 
@@ -121,7 +124,7 @@ body {
 }
 
 .uvod:hover, .kriteria:hover, .struktura:hover {
-    box-shadow: 4px 4px 10px #252636;
+    box-shadow: 4px 4px 10px #808080;
 }
 
 
@@ -165,10 +168,12 @@ li {
 .link-text {
     font-size: large;
     color: rgb(176, 176, 176);
+    transition: color 500ms;
 }
 
 .navbar-svg {
     fill: rgb(176, 176, 176);
+    transition: 500ms;
 }
 
 #navbar-active-text {
@@ -188,7 +193,7 @@ li {
 }
 #navbar-active:hover {
     border-radius: 1rem;
-    box-shadow: 4px 4px 10px #252636;
+    box-shadow: 4px 4px 10px #808080;
 }
 
 #navbar-inactive {
@@ -204,12 +209,16 @@ li {
 }
 
 .navbar-search-bar:hover {
-    box-shadow: 4px 4px 10px #252636;
+    box-shadow: 4px 4px 10px #808080;
 }
 
 .big {
     width: fit-content;
     width: -moz-fit-content;
+    box-shadow: 3px 3px 10px #707070;
+}
+.big:hover {
+    box-shadow: 4px 4px 10px #909090;
 }
 
 .big input {
@@ -219,6 +228,8 @@ li {
 .big svg {
     height: 36px;
     width: 36px;
+    fill: var(--text-color);
+    transition: fill 150ms;
 }
 
 .rozbory-main{
@@ -237,6 +248,7 @@ li {
 
 .grid-section {
     border-radius: 5px;
+    transition: 500ms;
 }
 
 
@@ -271,10 +283,9 @@ li {
     padding: 1rem;
     box-shadow: 3px 3px 10px var(--light-shadow);
     transition: 500ms;
-    min-height: 73vh;
 }
 .rozbory-section-1:hover, .rozbory-section-2:hover {
-    box-shadow: 4px 4px 10px #5a5b60;
+    box-shadow: 4px 4px 10px #808080;
 }
 
 .center-align {
@@ -300,10 +311,10 @@ li {
 }
 .seznam-button:hover {
     background-color: #323232;
-    box-shadow: 3px 3px 10px var(--light-shadow);
+    box-shadow: 3px 3px 10px #707070;
 }
 .seznam-button:active {
-    box-shadow: 4px 4px 10px #252636;
+    box-shadow: 4px 4px 10px #909090;
     transition: box-shadow 150ms;
 }
 
@@ -348,19 +359,28 @@ body {
     width: 0;
 }
 
+.content-container-rozbory {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    height: calc(100vh - var(--navbar-height));
+    /* overflow: hidden; */
+}
+
 @media screen and (width > 1385px) and (height > 950px) {
     .content-container {
         height: calc(100vh - var(--navbar-height));
     }
 }
 @media screen and (height < 950px) {
-    body {
+    .container-home-page {
         margin-bottom: 6.5rem;
     }
 }
 
 @media screen and (1385px > width > 785px) {
-    body {
+    .container-home-page {
         margin-bottom: 6.5rem;
     }
 }
@@ -372,7 +392,7 @@ body {
             'two'
             'three';
     }
-    body {
+    .container-home-page {
         margin-bottom: 6.5rem;
     }
 }
@@ -409,7 +429,7 @@ body {
             'two'
             'three';
     }
-    body {
+    .container-home-page {
         margin-bottom: 6.5rem;
     }
     .navbar-input{
@@ -436,17 +456,30 @@ body {
     #secondary-input {
         width: 220px;
     }
-    .rozbory-section-1, .rozbory-section-2 {
-        min-height: auto;
-    }
     /* .content-container-rozbory {
         display: flex;
         flex-direction: column;
         justify-content: center;
         min-height: calc(100vh - var(--navbar-height));
     } */
+    .content-container-rozbory {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        box-sizing: border-box;
+        height: auto;
+        margin-bottom: 6.5rem;
+    }
 }
 
+@media screen and (width < 510px) {
+    .content-container-rozbory {
+        margin: auto
+    }
+    .home-main, .rozbory-main {
+        margin: auto;
+    }
+}
 
 /* .home-main {
     display: none;
@@ -515,10 +548,11 @@ body {
     border-radius: 10px;
     box-shadow: 3px 3px 10px var(--light-shadow);
     transition: 500ms, fill 150ms;
+    fill: var(--text-color);
     
 }
 .menu-button:hover {
-    box-shadow: 4px 4px 10px #252636;
+    box-shadow: 4px 4px 10px #808080;
 }
 .menu-button:active {
     fill: var(--input-background);
@@ -542,16 +576,17 @@ body {
     display: flex;
     cursor: pointer;
     border: transparent;
-    background-color: #969ba4;
+    background-color: var(--navbar-background);
     border-radius: 10px;
-    box-shadow: 3px 3px 10px var(--light-shadow);
-    transition: fill 150ms, box-shadow 500ms;
+    fill: var(--text-color);
+    box-shadow: 3px 3px 10px #707070;
+    transition: 500ms, fill 150ms;
 }
 .download-button:hover {
-    box-shadow: 4px 4px 10px #1c1d27;
+    box-shadow: 4px 4px 10px #909090;
 }
 .download-button:active {
-    fill: var(--input-background);
+    fill: var(--navbar-background);
 }
 
 /* theme switch styles */
@@ -575,7 +610,7 @@ body {
 
 .theme-mode-switch svg:hover {
     background-color: var(--input-background);
-    box-shadow: 4px 4px 10px #252636;
+    box-shadow: 4px 4px 10px var(--light-shadow);
 }
 
 .theme-mode-switch button{
