@@ -499,6 +499,11 @@ body {
     margin: 0;
 }
 
+@media screen and (width < 510px) {
+    .home-main, .rozbory-main {
+        margin: auto;
+    }
+}
 
 /* 15/03 */
 .menu-button {
@@ -509,7 +514,8 @@ body {
     background-color: var(--input-background);
     border-radius: 10px;
     box-shadow: 3px 3px 10px var(--light-shadow);
-    transition: fill 150ms, box-shadow 500ms;
+    transition: 500ms, fill 150ms;
+    
 }
 .menu-button:hover {
     box-shadow: 4px 4px 10px #252636;
