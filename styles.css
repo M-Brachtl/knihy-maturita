@@ -462,10 +462,9 @@ body {
 }
 
 @media screen and (width < 510px) {
-    .content-container-rozbory {
-        margin: auto
-    }
     .home-main, .rozbory-main {
+        width: 100%;
+        box-sizing: border-box;
         margin: auto;
     }
 }

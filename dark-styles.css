@@ -534,6 +534,8 @@ body {
 
 @media screen and (width < 510px) {
     .home-main, .rozbory-main {
+        width: 100%;
+        box-sizing: border-box;
         margin: auto;
     }
 }
