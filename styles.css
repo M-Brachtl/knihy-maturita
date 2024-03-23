@@ -46,12 +46,7 @@ body {
     display: flex;
     align-items: center;
     flex-direction: row;
-    /* transition: 500ms;
-    border: transparent 3px solid;
-    border-radius: 1rem; */
 }
-
-/*  */
 
 .navbar-input {
     height: 26px;
@@ -96,8 +91,8 @@ body {
     margin: 2rem;
 
     padding: 1rem;
-    /* grid-template-rows: auto 1fr auto; */
 }
+
 .uvod {
     grid-area: one;
 }
@@ -114,7 +109,6 @@ body {
     box-shadow: 3px 3px 10px var(--light-shadow);
     transition: box-shadow 500ms;
     will-change: box-shadow;
-    /* height: 100%; */
 }
 
 .uvod:hover, .kriteria:hover, .struktura:hover {
@@ -125,18 +119,18 @@ body {
 ul {
     text-align: left;
 }
+
 li {
     padding: 5px;
     padding-top: 10px;
 }
+
 .uvod{
 
     margin: 0 auto;
     text-align: center;
     font-size: larger;
 }
-
-
 
 
 
@@ -230,8 +224,6 @@ li {
     flex-direction: column;
     justify-content: center;
     box-sizing: border-box;
-    /* height: calc(100vh - var(--navbar-height)); */
-    /* height: calc(100vh - 106px); */
 }
 
 .grid-section {
@@ -243,8 +235,6 @@ li {
 /* ROZBORY */
 
 .rozbory-main {
-    /* display: flex;
-    gap: 5rem; */
     display: grid;
     grid-template-areas:
         'one two two two';
@@ -324,7 +314,6 @@ object{
 main{
     top: 106px;
     position: relative;
-    /* z-index: -1; */
 }
 
 /* autor spany */
@@ -334,14 +323,6 @@ span{
     margin: 0 11px;
     width: fit-content;
 }
-
-/* .content-container {
-    height: auto;
-}
-body {
-    margin-bottom: 7rem;
-} */
-
 
 .menu-button {
     visibility: hidden;
@@ -354,7 +335,6 @@ body {
     justify-content: center;
     box-sizing: border-box;
     height: calc(100vh - var(--navbar-height));
-    /* overflow: hidden; */
 }
 
 @media screen and (width > 1525px) and (height > 950px) {
@@ -398,9 +378,6 @@ body {
 }
 
 @media screen and (width < 650px) {
-    /* * {
-        font-size: medium;
-    } */
     .navbar-item {
         visibility: hidden;
         width: 0;
@@ -436,21 +413,11 @@ body {
             'one'
             'two'; 
     }
-    /* .seznam-knih {
-        padding-left: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    } */
+
     #secondary-input {
         width: 220px;
     }
-    /* .rozbory-section-1, .rozbory-section-2 {
-        min-height: auto;
-    } */
-    /* .content-container-rozbory {
-        margin-bottom: 9rem;
-    } */
+
     .content-container-rozbory {
         display: flex;
         flex-direction: column;
@@ -468,14 +435,6 @@ body {
         margin: auto;
     }
 }
-
-
-/* .home-main {
-    display: none;
-} */
-/* .navbar {
-    visibility: hidden;
-} */
 
 .drop-link {
     display: flex;
