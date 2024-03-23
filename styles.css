@@ -357,19 +357,19 @@ body {
     /* overflow: hidden; */
 }
 
-@media screen and (width > 1385px) and (height > 950px) {
+@media screen and (width > 1525px) and (height > 950px) {
     .content-container {
         height: calc(100vh - var(--navbar-height));
     }
-    
 }
+
 @media screen and (height < 950px) {
     .container-home-page {
         margin-bottom: 6.5rem;
     }
 }
 
-@media screen and (1385px > width > 785px) {
+@media screen and (1525px > width > 785px) {
     .container-home-page {
         margin-bottom: 6.5rem;
     }
