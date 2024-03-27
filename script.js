@@ -151,3 +151,16 @@ navButtonMenu.addEventListener("click", () => {
         dropMenu.style.visibility = "hidden";
     }
 });
+
+// sidebar //
+
+const sidebar = document.querySelector('aside');
+sidebar.addEventListener('mouseenter', () => {
+    sidebar.style.left = '0px';
+    document.querySelector('#sidebar-btn').textContent = '<';
+})
+sidebar.addEventListener('mouseleave', () => {
+    console.log('mouseleave');
+    sidebar.style.left = '-143px'; // 162px šířka sidebaru bez tlačítka
+    document.querySelector('#sidebar-btn').textContent = '>';
+});

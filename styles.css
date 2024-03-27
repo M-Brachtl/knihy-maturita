@@ -573,3 +573,35 @@ body {
 .theme-mode-switch button{
     display: contents;
 }
+
+/* sidebar */
+
+aside {
+    background-color: #f4f4f4;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    /* Tohle stačí na animaci */
+    transition: 500ms;
+    /*  */
+    height: -webkit-fill-available;
+    border: solid #6c767e 6px;
+    left: -143px;
+    z-index: 200;
+}
+
+
+#sidebar-btn {
+    background-color: #252636;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 20px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    right: -25px;
+    color: white;
+    font-weight: bolder;
+}
