@@ -578,3 +578,52 @@ span{
 .theme-mode-switch button{
     display: contents;
 }
+
+/* sidebar */
+
+aside {
+    background-color: #333333;
+    padding: 5px 6px 0;
+    position: fixed;
+    top: 0  ;
+    /* Tohle stačí na animaci */
+    transition: 500ms;
+    /*  */
+    /* height: -webkit-fill-available; */
+    border: solid #6c767e 2px;
+    z-index: 200;
+}
+
+aside button {
+    display: contents;
+    cursor: pointer;
+}
+
+aside svg{
+    cursor: pointer;
+    transition: 500ms;
+    border-radius: 100%;
+    padding: 1px;
+    fill: lightgray;
+}
+
+aside svg:hover {
+    background-color: #666;
+    box-shadow: 4px 4px 10px var(--light-shadow);
+}   
+
+#sidebar-btn {
+    background-color: lightgrey;
+    border: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+    width: 20px;
+    height: 39px;
+    position: absolute;
+    top: -2px;
+    right: -22px;
+    font-weight: bolder;
+    display: block;
+    transition: 50ms;
+}

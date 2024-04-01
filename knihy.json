@@ -28,5 +28,15 @@
         "name": "Anna Karenina",
         "author": "Lev Nikolajevič Tolstoj",
         "path": "knihy/Anna_Karennina.pdf"
+    },
+    {
+        "name": "Revizor",
+        "author": "Nikolaj Vasiljevič Gogol",
+        "path": "knihy/Gogol_Revizor_Mackovik.pdf"
+    },
+    {
+        "name": "Otec Goriot",
+        "author": "Honoré de Balzac",
+        "path": "knihy/Goriot.pdf"
     }
 ]

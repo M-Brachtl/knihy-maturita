@@ -559,31 +559,50 @@ span{
 /* sidebar */
 
 aside {
-    background-color: #f4f4f4;
-    padding: 10px;
-    position: absolute;
-    top: 0;
+    background-color: #cccccc;
+    padding: 5px 6px 0;
+    position: fixed;
+    top: 0  ;
     /* Tohle stačí na animaci */
     transition: 500ms;
     /*  */
-    height: -webkit-fill-available;
-    border: solid #6c767e 6px;
-    left: -143px;
+    /* height: -webkit-fill-available; */
+    border: solid #6c767e 2px;
     z-index: 200;
 }
 
+aside button {
+    display: contents;
+    cursor: pointer;
+
+}
+
+aside   svg{
+    cursor: pointer;
+    transition: 500ms;
+    border-radius: 100%;
+    padding: 1px;
+}
+
+aside svg:hover {
+    background-color: var(--input-background);
+    box-shadow: 4px 4px 10px var(--light-shadow);
+}   
 
 #sidebar-btn {
     background-color: #252636;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
     cursor: pointer;
     width: 20px;
-    height: 40px;
+    height: 39px;
     position: absolute;
-    top: 0;
-    right: -25px;
+    top: -2px;
+    right: -22px;
     color: white;
     font-weight: bolder;
+    display: block;
+    transition: 50ms;
 }

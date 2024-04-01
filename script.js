@@ -3,6 +3,7 @@ try {
         console.log('dark');
         document.getElementById('styles').disabled = true;
         document.querySelector('.theme-mode-switch button').innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Zm0-80q88 0 158-48.5T740-375q-20 5-40 8t-40 3q-123 0-209.5-86.5T364-660q0-20 3-40t8-40q-78 32-126.5 102T200-480q0 116 82 198t198 82Zm-10-270Z"/></svg>';
+        document.querySelector('#theme-aside-switch').innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Zm0-80q88 0 158-48.5T740-375q-20 5-40 8t-40 3q-123 0-209.5-86.5T364-660q0-20 3-40t8-40q-78 32-126.5 102T200-480q0 116 82 198t198 82Zm-10-270Z"/></svg>';
     }else{
         console.log('light');
         document.getElementById('dark-styles').disabled = true;
@@ -11,8 +12,9 @@ try {
     console.log('light+');
     document.getElementById('dark-styles').disabled = true;
 }
-
-
+if (window.location.href.includes('rozbory.html')) {
+    document.querySelector('main').style.top = '137px';
+};
 let darkmode;
 try {
     darkmode = localStorage.theme === 'dark';
@@ -155,12 +157,15 @@ navButtonMenu.addEventListener("click", () => {
 // sidebar //
 
 const sidebar = document.querySelector('aside');
+const sidebarWidth = sidebar.getBoundingClientRect().width + 2 + 'px'; // 2px je border
+sidebar.style.left = '-' + sidebarWidth;
+
 sidebar.addEventListener('mouseenter', () => {
     sidebar.style.left = '0px';
     document.querySelector('#sidebar-btn').textContent = '<';
 })
 sidebar.addEventListener('mouseleave', () => {
     console.log('mouseleave');
-    sidebar.style.left = '-143px'; // 162px šířka sidebaru bez tlačítka
+    sidebar.style.left = '-' + sidebarWidth; // šířka sidebaru bez tlačítka
     document.querySelector('#sidebar-btn').textContent = '>';
 });
