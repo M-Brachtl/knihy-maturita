@@ -39,4 +39,10 @@
         "author": "Honoré de Balzac",
         "path": "knihy/Goriot.pdf"
     }
+,
+    {
+        "name": "Kulička",
+        "author": "Guy de Maupassant",
+        "path": "knihy/Kulicka.pdf"
+    }
 ]
