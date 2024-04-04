@@ -591,16 +591,17 @@ span{
 /* sidebar */
 
 aside {
-    background-color: #333333;
+    background-color: #565656;
     padding: 5px 6px 0;
     position: fixed;
-    top: 0  ;
+    top: 150px;
     /* Tohle stačí na animaci */
     transition: 500ms;
     /*  */
     /* height: -webkit-fill-available; */
-    border: solid #6c767e 2px;
+    border: solid #17171f 2px;
     z-index: 200;
+    box-shadow: 0 0 10px var(--light-shadow);
 }
 
 aside button {
@@ -608,7 +609,7 @@ aside button {
     cursor: pointer;
 }
 
-aside svg{
+#aside-switch-svg{
     cursor: pointer;
     transition: 500ms;
     border-radius: 100%;
@@ -616,23 +617,36 @@ aside svg{
     fill: lightgray;
 }
 
-aside svg:hover {
+#aside-switch-svg:hover {
     background-color: #666;
     box-shadow: 4px 4px 10px var(--light-shadow);
 }   
 
 #sidebar-btn {
-    background-color: lightgrey;
+    background-color: var(--navbar-background);
+    box-shadow: 0 0 10px var(--light-shadow);
     border: none;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     cursor: pointer;
-    width: 20px;
+    width: 25px;
     height: 39px;
     position: absolute;
     top: -2px;
-    right: -22px;
+    right: -27px;
     font-weight: bolder;
     display: block;
-    transition: 50ms;
+    transition: 500ms;
+}
+
+#aside-button-svg {
+    fill: ivory;
+    position: absolute;
+    transition: 500ms;
+}
+
+#sidebar-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

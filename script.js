@@ -160,10 +160,27 @@ sidebar.style.left = '-' + sidebarWidth;
 
 sidebar.addEventListener('mouseenter', () => {
     sidebar.style.left = '0px';
-    document.querySelector('#sidebar-btn').textContent = '<';
-})
+    let leftArrow = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    leftArrow.setAttribute('height', '24');
+    leftArrow.setAttribute('viewBox', '0 -960 960 960');
+    leftArrow.setAttribute('width', '24');
+    leftArrow.setAttribute('preserveAspectRatio', 'xMidYMid meet');
+    leftArrow.innerHTML = '<path d="M440-240 200-480l240-240 56 56-183 184 183 184-56 56Zm264 0L464-480l240-240 56 56-183 184 183 184-56 56Z"/>';
+    leftArrow.id = 'aside-button-svg';
+    document.querySelector('#sidebar-btn').innerHTML = '';
+    document.querySelector('#sidebar-btn').appendChild(leftArrow);
+});
+
 sidebar.addEventListener('mouseleave', () => {
     console.log('mouseleave');
     sidebar.style.left = '-' + sidebarWidth; // šířka sidebaru bez tlačítka
-    document.querySelector('#sidebar-btn').textContent = '>';
+    let rightArrow = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    rightArrow.setAttribute('height', '24');
+    rightArrow.setAttribute('viewBox', '0 -960 960 960');
+    rightArrow.setAttribute('width', '24');
+    rightArrow.setAttribute('preserveAspectRatio', 'xMidYMid meet');
+    rightArrow.innerHTML = '<path d="M383-480 200-664l56-56 240 240-240 240-56-56 183-184Zm264 0L464-664l56-56 240 240-240 240-56-56 183-184Z"/>';
+    rightArrow.id = 'aside-button-svg';
+    document.querySelector('#sidebar-btn').innerHTML = '';
+    document.querySelector('#sidebar-btn').appendChild(rightArrow);
 });

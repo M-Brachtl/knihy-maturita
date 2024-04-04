@@ -567,54 +567,60 @@ span{
 /* sidebar */
 
 aside {
-    background-color: #cccccc;
+    background-color: #eff4f8;
     padding: 5px 6px 0;
     position: fixed;
-    top: 0  ;
+    top: 150px;
     /* Tohle stačí na animaci */
     transition: 500ms;
     /*  */
     /* height: -webkit-fill-available; */
-    border: solid #6c767e 2px;
+    border: solid #cfd6dc 2px;
     z-index: 200;
+    box-shadow: 0 0 10px rgb(202, 202, 202);
 }
 
 aside button {
     display: contents;
     cursor: pointer;
-
 }
 
-aside   svg{
+#aside-switch-svg{
     cursor: pointer;
     transition: 500ms;
     border-radius: 100%;
     padding: 1px;
 }
 
-aside svg:hover {
+#aside-switch-svg:hover {
     background-color: var(--input-background);
     box-shadow: 4px 4px 10px var(--light-shadow);
 }   
 
 #sidebar-btn {
-    background-color: #252636;
-    color: white;
+    background-color: var(--navbar-background);
     border: none;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     cursor: pointer;
-    width: 20px;
+    width: 25px;
     height: 39px;
     position: absolute;
     top: -2px;
-    right: -22px;
-    color: white;
-    font-weight: bolder;
+    right: -27px;
     display: block;
-    transition: 50ms;
+    transition: 500ms;
+    box-shadow: 0 0 10px rgb(202, 202, 202);
 }
 
-/* .rozbory-section-1 {
+#aside-button-svg {
+    fill: black;
+    position: absolute;
+    transition: 500ms;
+}
 
-} */
+#sidebar-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
