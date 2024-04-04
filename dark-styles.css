@@ -264,6 +264,7 @@ li {
     grid-area: two;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .rozbory-section-1, .rozbory-section-2 {
@@ -446,6 +447,14 @@ span{
     .home-main, .rozbory-main {
         margin: auto;
     }
+}
+
+@media screen and (width > 650px) {
+    .rozbory-section-1 {
+        min-width: 360px;
+        overflow-y: auto;
+        height: 73vh;
+    }  
 }
 
 .drop-link {

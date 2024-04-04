@@ -375,7 +375,7 @@ span{
     }
     .navbar {
         justify-content: center;
-    }
+    } 
 }
 
 @media screen and (width < 650px) {
@@ -435,6 +435,14 @@ span{
         box-sizing: border-box;
         margin: auto;
     }
+}
+
+@media screen and (width > 650px) {
+    .rozbory-section-1 {
+        min-width: 360px;
+        overflow-y: auto;
+        height: 73vh;
+    }  
 }
 
 .drop-link {
@@ -606,3 +614,7 @@ aside svg:hover {
     display: block;
     transition: 50ms;
 }
+
+/* .rozbory-section-1 {
+
+} */
