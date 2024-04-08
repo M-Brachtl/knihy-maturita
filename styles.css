@@ -21,7 +21,7 @@ body {
     justify-content: space-between;
     align-items: center;
     background-color: var(--navbar-background);
-    padding: 5px 25px 5px 25px;
+    padding: 5px 45px 5px 45px;
     box-shadow: 0px 3px 10px var(--light-shadow);
     transition: 500ms;
 }
@@ -368,7 +368,7 @@ span{
     }
 }
 
-@media screen and (width < 1150px) {
+@media screen and (width < 1185px) {
     .navbar-heading {
         visibility: hidden;
         width: 0;
