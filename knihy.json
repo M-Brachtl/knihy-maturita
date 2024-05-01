@@ -48,5 +48,10 @@
         "name": "Nana",
         "author": "Émile Zola",
         "path": "knihy/Nana_Emile_Zola.pdf"
+    },
+    {
+        "name": "Dobrodružství Toma Sawyera",
+        "author": "Mark Twain",
+        "path": "knihy/cetba_Tom_sawyer.pdf"
     }
 ]
