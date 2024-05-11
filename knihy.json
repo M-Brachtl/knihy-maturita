@@ -53,5 +53,10 @@
         "name": "Dobrodružství Toma Sawyera",
         "author": "Mark Twain",
         "path": "knihy/cetba_Tom_sawyer.pdf"
+    },
+    {
+        "name": "Oliver Twist",
+        "author": "Charles Dickens",
+        "path": "knihy/Oliver_Twist.pdf"
     }
 ]
