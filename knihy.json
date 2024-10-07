@@ -15,14 +15,24 @@
         "path": "knihy/Noc_na_Karlstejne.pdf"
     },
     {
-        "name": "Chrám Matky Boží v Paříži",
-        "author": "Victor Hugo",
-        "path": "knihy/notre_dame.pdf"
-    },
-    {
         "name": "Strakonický dudák",
         "author": "Josef Kajetán Tyl",
         "path": "knihy/STAKONICKY__DUDAK.pdf"
+    },
+    {
+        "name": "Svatý Xaverius",
+        "author": "Jakub Arbes",
+        "path": "knihy/svaty_xaverius.pdf"
+    },
+    {
+        "name": "Maryša",
+        "author": "Mrštíkovi",
+        "path": "knihy/marysa.pdf"
+    },
+    {
+        "name": "Chrám Matky Boží v Paříži",
+        "author": "Victor Hugo",
+        "path": "knihy/notre_dame.pdf"
     },
     {
         "name": "Anna Karenina",
@@ -58,5 +68,15 @@
         "name": "Oliver Twist",
         "author": "Charles Dickens",
         "path": "knihy/Oliver_Twist.pdf"
+    },
+    {
+        "name": "Tajuplný ostrov",
+        "author": "Jules Verne",
+        "path": "knihy/tajuplny_ostrov.pdf"
+    },
+    {
+        "name": "Krysař",
+        "author": "Viktor Dyk",
+        "path": "knihy/krysar.pdf"
     }
 ]
