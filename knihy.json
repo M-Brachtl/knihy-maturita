@@ -30,9 +30,19 @@
         "path": "knihy/marysa.pdf"
     },
     {
+        "name": "Staré pověsti české",
+        "author": "Alois Jirásek",
+        "path": "knihy/povesti_ceske.pdf"
+    },
+    {
         "name": "Chrám Matky Boží v Paříži",
         "author": "Victor Hugo",
         "path": "knihy/notre_dame.pdf"
+    },
+    {
+        "name": "Jáma a kyvadlo",
+        "author": "Edgar Allan Poe",
+        "path": "knihy/jama_kyvadlo.pdf"
     },
     {
         "name": "Anna Karenina",
