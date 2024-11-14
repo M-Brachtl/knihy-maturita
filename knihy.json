@@ -35,6 +35,16 @@
         "path": "knihy/povesti_ceske.pdf"
     },
     {
+        "name": "Radúz a Mahulena",
+        "author": "Julius Zeyer",
+        "path": "knihy/mahulena.pdf"
+    },
+    {
+        "name": "Tyrolské elegie",
+        "author": "Karel Havlíček Borovský",
+        "path": "knihy/elegie.pdf"
+    },
+    {
         "name": "Chrám Matky Boží v Paříži",
         "author": "Victor Hugo",
         "path": "knihy/notre_dame.pdf"
