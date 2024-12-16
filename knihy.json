@@ -45,6 +45,11 @@
         "path": "knihy/elegie.pdf"
     },
     {
+        "name": "Povídky malostranské",
+        "author": "Jan Neruda",
+        "path": "knihy/malostranske.pdf"
+    },
+    {
         "name": "Chrám Matky Boží v Paříži",
         "author": "Victor Hugo",
         "path": "knihy/notre_dame.pdf"
